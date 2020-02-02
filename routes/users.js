@@ -12,7 +12,7 @@ router.get('/',function (req,res,next) {
 router.get('/useradd',function (req,res,next) {
   res.render('user/useradd');
 
-})
+});
 
 
 router.post('/useradd',function (req,res,next) {

@@ -5,17 +5,12 @@ var User=require('../model/User');
 
 router.get('/',function (req,res,next) {
   res.render('index',{title:'Post Text'});
-
-})
+});
 router.get('/postadd',function (req,res,next) {
   User.find(function (err,rtn) {
     if (err) throw err;
     res.render('post/postadd',{users:rtn});
-
-
   })
-
-
 })
 router.post('/postadd',function (req,res,next) {
   var post=new Post();
